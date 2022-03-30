@@ -1,7 +1,7 @@
 {
   "type": "panel",
-  "name": "Button",
-  "id": "speakyourcode-button-panel",
+  "name": "Button Test",
+  "id": "iow-button-panel",
   "info": {
     "description": "Button Control Panel",
     "author": {
