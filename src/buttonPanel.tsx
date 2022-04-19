@@ -3,6 +3,8 @@ import { getBackendSrv, getDataSourceSrv, SystemJS } from '@grafana/runtime';
 import { Button, HorizontalGroup, VerticalGroup } from '@grafana/ui';
 import React from 'react';
 import { ButtonOptions, Options } from 'types';
+import styles from "./Team.module.scss";
+import 'stylesheet.css';
 
 interface Props extends PanelProps<Options> {}
 
@@ -14,6 +16,13 @@ export const ButtonPanel: React.FC<Props> = ({ options, replaceVariables }) => {
         <Button
           key={index}
           variant={b.variant}
+          style={{
+            height: '60px',
+            width : '300px',
+            fontSize : '20px',
+            position: 'relative',
+            }}
+          className="buttonW"
           onClick={async () => {
             const payload = JSON.parse(replaceVariables(b.query || '{}'));
             const ds = await getDataSourceSrv().get(b.datasource);

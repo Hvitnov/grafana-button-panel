@@ -55,7 +55,7 @@ export const Editor: React.FC<EditorProps> = ({ buttons, onChange }) => {
       {buttons.map((b: ButtonOptions, i: number) => (
         <Collapse
           key={i}
-          label={'Knap ' + (i + 1).toString()}
+          label={'Button ' + (i + 1).toString()}
           isOpen={isOpen[i]}
           collapsible
           onToggle={() => {
@@ -70,7 +70,7 @@ export const Editor: React.FC<EditorProps> = ({ buttons, onChange }) => {
             <Input
               id={'t-' + i.toString()}
               value={b.text}
-              placeholder="Knap"
+              placeholder="Button"
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 updateButtons(i, { text: e.target.value })
               }
